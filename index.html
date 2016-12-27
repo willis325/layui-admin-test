@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lay/css/layui.css">
+    <link rel="stylesheet" href="./lay/framework.css">
+</head>
+
+<body>
+    <header>
+        <span class="title">后台管理系统</span>
+        <div class="top-nav">
+            <ul class="layui-nav" lay-filter="nav">
+                <li class="layui-nav-item layui-this"><a href="javascript:;" data-index="0">菜单一</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-index="1">菜单二</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-index="2">菜单三</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-index="3">菜单四</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-index="4">菜单五</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="box">
+        <div class="left">
+            <div class="aside-btns">
+                <button class="layui-btn showFull"><i class="layui-icon">&#xe60f;</i></button>
+                <button class="layui-btn"><i class="layui-icon">&#xe614;</i></button>
+                <button class="layui-btn"><i class="layui-icon">&#xe609;</i></button>
+                <button class="layui-btn"><i class="layui-icon">&#xe62c;</i></button>
+            </div>
+            <ul class="layui-nav layui-nav-tree left-tree" lay-filter="aside">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">小菜单1.1</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" data-href="1.1.1.html">小菜单1.1.1</a></dd>
+                        <dd><a href="javascript:;" data-href="1.1.2.html">小菜单1.1.2</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="1.2.html">小菜单1.2</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" data-href="1.3.html">小菜单1.3</a></li>
+            </ul>
+        </div>
+        <div class="con">
+            <div class="layui-tab" lay-allowClose="true" lay-filter="tab">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">
+                        小菜单1.1.1
+                    </li>
+                </ul>
+                <div class="layui-tab-content">
+                    <!-- <div class="tabOperation">
+                        <ul>
+                            <li><a href="">关闭当前选项卡</a></li>
+                            <li class="divider"></li>
+                            <li><a href="">关闭其他选项卡</a></li>
+                            <li><a href="">刷新当前选项卡</a></li>
+                        </ul>
+                    </div> -->
+                    <div class="layui-tab-item layui-show">
+                        <iframe src="html/1.1.1.html" name="小菜单1.1.1" index="0"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./lay/layui.js"></script>
+    <script>
+        var json = [{
+            "name": "菜单一",
+            "children": [{
+                "name": "小菜单1.1",
+                "url": "",
+                children: [{
+                    "name": "小菜单1.1.1",
+                    "url": "1.1.1.html"
+                }, {
+                    "name": "小菜单1.1.2",
+                    "url": "1.1.2.html"
+                }]
+            }, {
+                "name": "小菜单1.2",
+                "url": "1.2.html"
+            }, {
+                "name": "小菜单1.3",
+                "url": "1.3.html"
+            }]
+        }, {
+            "name": "菜单二",
+            "children": [{
+                "name": "小菜单2.1",
+                "url": "",
+                children: [{
+                    "name": "小菜单2.1.1",
+                    "url": "2.1.1.html"
+                }, {
+                    "name": "小菜单2.1.2",
+                    "url": "2.1.2.html"
+                }]
+            }, {
+                "name": "小菜单2.2",
+                "url": "2.2.html"
+            }, {
+                "name": "小菜单2.3",
+                "url": "2.3.html"
+            }]
+        }, {
+            "name": "菜单三"
+        }, {
+            "name": "菜单四"
+        }, {
+            "name": "菜单五"
+        }];
+    </script>
+    <script src="./js/basis.js"></script>
+</body>
+
+</html>
